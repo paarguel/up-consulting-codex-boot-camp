@@ -1,23 +1,56 @@
 # 08 - Official Codex Sources
 
-Use these links when refreshing the boot camp or answering setup questions.
+Use official sources for setup and product claims. Do not rely on random download links, screenshots, or outdated blog posts.
 
-## Core Codex docs
+## Codex
 
-- Codex overview: https://developers.openai.com/codex/overview
+- Codex overview and docs: https://developers.openai.com/codex/
 - Codex quickstart: https://developers.openai.com/codex/quickstart
-- Codex best practices: https://developers.openai.com/codex/learn/best-practices
+- Codex app: https://developers.openai.com/codex/app
+- Codex Windows app docs: https://developers.openai.com/codex/app/windows
+- Codex sandboxing: https://developers.openai.com/codex/concepts/sandboxing
+- Codex prompting: https://developers.openai.com/codex/prompting
+- Codex skills: https://developers.openai.com/codex/skills
+- Codex app features: https://developers.openai.com/codex/app/features
 
-## Safety and permissions
+## Git and GitHub
 
-- Agent approvals and security: https://developers.openai.com/codex/agent-approvals-security
-- Sandboxing concepts: https://developers.openai.com/codex/concepts/sandboxing
+- Git for Windows: https://git-scm.com/downloads/win
+- GitHub: https://github.com/
+- GitHub Desktop, optional: https://desktop.github.com/download/
 
-## Reusable workflows
+## Repo URL
 
-- AGENTS.md guidance: https://developers.openai.com/codex/guides/agents-md
-- Agent Skills: https://developers.openai.com/codex/skills
+Use this for cloning the boot camp:
 
-## Teaching note
+```text
+https://github.com/paarguel/up-consulting-codex-boot-camp.git
+```
 
-Refresh these links before teaching a live session. Codex surfaces, install paths, and permission defaults can change over time.
+## Setup commands
+
+Clone into the current empty folder:
+
+```powershell
+git clone https://github.com/paarguel/up-consulting-codex-boot-camp.git .
+```
+
+Clone into a new nested folder:
+
+```powershell
+git clone https://github.com/paarguel/up-consulting-codex-boot-camp.git
+```
+
+Run the setup check:
+
+```powershell
+.\scripts\setup-check.ps1
+```
+
+## Instructor note
+
+When teaching beginners, open the official source yourself and explain why it is trusted before anyone downloads software.
+
+Use this language:
+
+> We want the official source, a known publisher, and a clear reason for the download before we click anything.

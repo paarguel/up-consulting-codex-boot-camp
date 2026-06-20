@@ -1,47 +1,82 @@
 # 07 - Instructor Checklist
 
+Use this before and during a live session.
+
 ## Before the session
 
-- [ ] Confirm learner has a ChatGPT/OpenAI account with Codex access.
-- [ ] Confirm learner has Git installed.
-- [ ] Confirm learner has Python installed.
-- [ ] Confirm learner can join Zoom and screen share.
-- [ ] Send the repo link or zip.
-- [ ] Keep a backup copy of the repo ready.
-- [ ] Decide whether you are teaching the 90-minute or 3-hour version.
+- [ ] Confirm the learner has a computer they can use on Zoom or in person.
+- [ ] Confirm they can install software, or have a fallback instructor demo ready.
+- [ ] Have the official Codex download page ready.
+- [ ] Have the official Git for Windows download page ready.
+- [ ] Have this repo URL ready.
+- [ ] Open `SESSION_PLAN.md`.
+- [ ] Open `teacher-notes/01-whiteboard-ai-history.md`.
+- [ ] Open `teacher-notes/02-codex-install-and-app-tour.md`.
+- [ ] Open `teacher-notes/03-first-project-folder-and-clone.md`.
+- [ ] Open `teacher-notes/04-problem-imagination-board.md`.
 
-## During setup
+## Teaching posture
 
-- [ ] Have learner open PowerShell.
-- [ ] Have learner clone or unzip the repo.
-- [ ] Run `.\scripts\setup-check.ps1`.
-- [ ] Open Codex from the repo root.
-- [ ] Paste the first safe prompt.
+Say early:
 
-## During exercises
+> We are not trying to make AI do everything. We are learning how to supervise it.
 
-- [ ] Learner asks Codex to inspect before editing.
-- [ ] Learner asks for a plan before editing.
-- [ ] Learner approves a small change.
-- [ ] Learner runs tests.
-- [ ] Learner reviews the diff.
-- [ ] Learner explains the change back to you.
+Keep the learner moving through small wins.
 
-## Watch for
+## Setup checklist
 
-- Prompting too vaguely
-- Letting Codex rewrite too much
-- Not reading diffs
-- Skipping tests
-- Treating Codex as always right
-- Getting stuck in setup instead of learning the loop
+- [ ] Codex installed or instructor demo ready.
+- [ ] Git installed.
+- [ ] Empty project folder created.
+- [ ] Folder opened in Codex.
+- [ ] Repo cloned into the current folder or cloned as a nested folder and reopened.
+- [ ] `README.md` and `AGENTS.md` inspected by Codex.
+- [ ] `scripts/setup-check.ps1` run if time allows.
 
-## End of session
+## Lab checklist
 
-Have learner answer:
+For each lab:
 
-1. What is Codex?
-2. What makes a good prompt?
-3. What should Codex ask permission for?
-4. What is the inspect-plan-edit-test-review workflow?
-5. What would you use this for next?
+- [ ] Read the work-pack README or workflow.
+- [ ] Ask Codex to inspect before producing.
+- [ ] Ask for a named output file in `outputs/`.
+- [ ] Require a Questions or Needs Human Review section.
+- [ ] Review the output with the learner.
+- [ ] Save or point to the reusable workflow.
+
+## Debrief questions
+
+Ask:
+
+- What was the input?
+- What did Codex produce?
+- What did it get right?
+- What still needed human review?
+- What would make this workflow reusable?
+- What real work task does this remind you of?
+
+## Watch for these failure modes
+
+- The learner wants Codex to "just do it."
+- The learner skips reading the output.
+- The learner wants to paste real sensitive data.
+- The learner gets stuck because they cannot imagine a use case.
+- The instructor over-explains setup and loses the hands-on part.
+
+## Recovery moves
+
+If setup fails:
+
+- Screen share from the instructor machine.
+- Let the learner practice prompt review and safety decisions.
+
+If the learner has no ideas:
+
+- Use `handouts/from-office-pain-to-codex-prompt.md`.
+- Ask which category of work is most annoying: writing, lists, meetings, planning, reporting, follow-up, or SOPs.
+
+If Codex produces too much:
+
+- Ask it to create a shorter version.
+- Ask it to list only what requires review.
+- Ask it to save the reusable prompt, not expand the scope.

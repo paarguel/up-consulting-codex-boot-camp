@@ -1,11 +1,15 @@
 # 04 - Prompting and Workflows
 
+## Goal
+
+Teach learners how to turn vague office frustration into a clear Codex task.
+
 ## The beginner mistake
 
 Most beginners ask:
 
 ```text
-Can you fix this?
+Can you help with this?
 ```
 
 That gives Codex too much freedom and too little context.
@@ -16,72 +20,137 @@ Use this shape:
 
 ```text
 Context:
-- I am in exercise 02.
-- The tests are failing.
-- I want the smallest fix.
+- I work in a parish office.
+- I am preparing a youth night.
+- The files in inputs/ are messy notes, volunteer availability, and budget details.
 
 Task:
-- Read the README and tests.
-- Explain what is failing.
-- Propose a plan.
-- Do not edit yet.
+- Read the inputs folder.
+- Create an event command center.
+- Put unclear details in Questions.
+
+Constraints:
+- Do not invent missing names, dates, costs, or assignments.
+- Keep the tone warm and organized.
+- Use only the files in this folder.
 
 Definition of done:
-- Tests pass.
-- The diff is small.
-- You explain the change.
+- Save the result in outputs/event-command-center.md.
+- Include what I should review before sending anything.
 ```
 
-## Core workflow
+## The Codex Work Loop
 
 ```text
-clarify -> inspect -> plan -> edit -> test -> review -> commit
+collect -> contextualize -> produce -> review -> compound
+```
+
+### 1. Collect
+
+Put the relevant files in one folder.
+
+Example:
+
+```text
+inputs/
+  messy-event-notes.md
+  volunteer-availability.csv
+  budget.csv
+  room-and-supplies.md
+```
+
+### 2. Contextualize
+
+Tell Codex:
+
+- What the job is
+- Who the audience is
+- What tone matters
+- What the output should include
+- What it must not invent
+- What "done" means
+
+### 3. Produce
+
+Ask for a real artifact, not just advice.
+
+Examples:
+
+```text
+outputs/event-command-center.md
+outputs/follow-up-email.md
+outputs/action-tracker.csv
+outputs/vendor-comparison-table.md
+```
+
+### 4. Review
+
+Check:
+
+- Names
+- Dates and times
+- Money
+- Private information
+- Commitments
+- Tone
+- Missing facts
+- Anything that will be sent or published
+
+### 5. Compound
+
+Save the prompt and checklist so the learner can repeat the workflow next week.
+
+Example:
+
+```text
+workflows/event-command-center-workflow.md
 ```
 
 ## Prompt ladder
 
-### Level 1 - Explain
+### Level 1 - Inspect
 
 ```text
-Read this folder and explain what the code is supposed to do. Do not edit anything.
+Read this folder and explain what files are here, what the task appears to be, and what you would need to clarify. Do not edit anything yet.
 ```
 
-### Level 2 - Diagnose
+### Level 2 - Draft
 
 ```text
-Run the relevant tests. Explain the first failure and the likely cause before changing files.
+Create the requested draft artifact from the files in inputs/. Put unclear or missing details in a Questions section. Save the result in outputs/.
 ```
 
-### Level 3 - Small fix
+### Level 3 - Review
 
 ```text
-Make the smallest change that should pass the failing test. Do not refactor unrelated code.
+Review the draft for names, dates, privacy, tone, missing information, and anything that should not be sent yet. Do not rewrite it unless I ask.
 ```
 
-### Level 4 - Review
+### Level 4 - Revise
 
 ```text
-Show me the diff and explain it line by line in beginner language.
+Revise the draft using the review notes. Keep the same structure. Do not add facts that are not in the source files.
 ```
 
-### Level 5 - Improve
+### Level 5 - Save workflow
 
 ```text
-Suggest one improvement that would make this easier to maintain, but do not implement it yet.
+Turn this successful prompt into a reusable workflow I can use next time. Save it as workflow.md with inputs needed, prompt, review checklist, and final-send reminders.
 ```
 
 ## Bad prompts and safer rewrites
 
 | Vague prompt | Safer version |
 |---|---|
-| Fix everything. | Find the first failing test and make the smallest fix. |
-| Make this better. | Suggest 3 improvements, then wait. |
-| Rewrite this app. | Identify the riskiest part of the code and propose a refactor plan. |
-| Add AI. | Explain where AI would help and where it would be overkill. |
-| Push this to GitHub. | Show me the diff and ask before any Git write operation. |
+| Make this good. | Read the inputs and create a draft with a Questions section for unclear details. |
+| Write the email. | Draft the email, then list what I must verify before sending. |
+| Clean this spreadsheet. | Identify duplicates, missing fields, and suspicious rows. Save a review list before changing data. |
+| Summarize this meeting. | Create minutes, decisions, action items, open questions, and follow-up email. |
+| Automate this. | First map the repeated workflow: inputs, output, review risk, and reusable prompt. |
+| Search the internet and decide. | List sources, compare options against criteria, and separate facts from recommendations. |
 
 ## Instructor tip
 
-Have the learner say the workflow out loud:
+Have the learner say this out loud:
 
-> "Inspect first. Plan second. Edit third. Test fourth. Review fifth."
+> Inspect first. Draft second. Review third. Send never without a human.

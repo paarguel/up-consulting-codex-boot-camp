@@ -1,4 +1,4 @@
-# Setup check for UP Consulting Codex Boot Camp
+# Setup check for UP Consulting Codex Boot Camp.
 # Run from the repo root:
 # .\scripts\setup-check.ps1
 
@@ -30,12 +30,12 @@ Write-Host "UP Consulting Codex Boot Camp setup check" -ForegroundColor Cyan
 Write-Host ""
 
 Check-Command "git" "Install Git for Windows."
-Check-Command "python" "Install Python 3.11+ and reopen PowerShell."
 Check-Command "codex" "Install/open Codex using the official OpenAI Codex setup docs."
-Check-Command "gh" "Optional: install GitHub CLI if you want to publish this repo from the terminal."
+Check-Command "python" "Optional for the coding addendum: install Python 3.11+ and reopen PowerShell."
+Check-Command "gh" "Optional: install GitHub CLI if you want to publish repos from the terminal."
 
 Write-Host "Next step:" -ForegroundColor Cyan
-Write-Host "  codex"
+Write-Host "  Open this folder in Codex, then ask Codex to inspect README.md and AGENTS.md."
 Write-Host ""
 Write-Host "First prompt:"
-Write-Host "  Read README.md and AGENTS.md. Explain this repo to me like I am new to AI coding agents. Do not edit files yet."
+Write-Host "  Read README.md and AGENTS.md. Explain this repo to me like I am new to AI-assisted knowledge work. Do not edit files yet."

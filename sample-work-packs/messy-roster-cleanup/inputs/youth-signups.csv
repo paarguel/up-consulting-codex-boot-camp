@@ -1,0 +1,8 @@
+student_name,grade,parent_name,parent_email,permission_status,notes
+Mia Santos,8,Carla Santos,carla@example.test,received,
+Mia S.,8,Carla Santos,carla@example.test,received,possible duplicate
+Noah Price,9,Dan Price,,missing,Need email
+Lena Brooks,10,Pat Brooks,pat@example.test,pending,Allergy form mentioned but not attached
+Owen Miller,,Sam Miller,sam@example.test,received,Missing grade
+Grace Lee,11,Jamie Lee,jamie@example.test,received,
+Ethan Wright,9,Jordan Wright,jordan@example.test,,Missing permission status

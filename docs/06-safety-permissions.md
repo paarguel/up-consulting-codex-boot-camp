@@ -1,66 +1,120 @@
-# 06 - Safety and Permissions
+# 06 - Safety, Privacy, and Permissions
 
-## The core safety idea
+## Goal
 
-Codex is most useful when it has enough access to help but not so much access that mistakes become expensive.
+Give beginners a practical safety model they can remember.
 
-## Things to protect
+Codex can help with drafting, organizing, checking, and workflow support. The human stays responsible for privacy, judgment, commitments, and final sending.
 
-- API keys
-- Passwords
-- Personal files
-- Production systems
-- Real customer data
-- Bank or billing systems
-- Anything outside the exercise folder
+## Three-color data rule
 
-## Beginner safety defaults
+### Green data
 
-Use this posture:
+Safe for boot camp practice:
+
+- Fake event notes
+- Fake rosters
+- Public website copy
+- Draft announcements
+- Invented meeting notes
+- Sample budgets
+- Practice vendor notes
+
+### Yellow data
+
+Use with caution:
+
+- Internal procedures
+- Non-sensitive staff notes
+- General planning documents
+- Draft policies
+- Work materials that are not public but are not deeply sensitive
+
+Before using yellow data, ask:
+
+- Is this allowed by the organization?
+- Does this contain private people information?
+- Would I be comfortable if this were mishandled?
+
+### Red data
+
+Do not use in boot camp:
+
+- Real parishioner personal data
+- Children's information
+- Medical or allergy details tied to real people
+- Confession, pastoral care, or counseling notes
+- Donor records
+- Passwords, tokens, or API keys
+- Bank, credit card, or financial account details
+- Personnel issues
+- Legal or disciplinary matters
+
+## Permissions in plain language
+
+Codex uses permissions and sandboxing to control what it can do.
+
+The learner should understand:
+
+- The project folder is the normal boundary.
+- Approval prompts are there for a reason.
+- The narrowest permission that gets the job done is usually best.
+- Full access should not be the beginner default.
+- If Codex asks to go outside the folder or use the internet, pause and ask why.
+
+## Review checklist before sending or publishing
+
+Check:
+
+- Is every name correct?
+- Are dates and times correct?
+- Are costs and quantities correct?
+- Did Codex invent anything?
+- Is private information removed?
+- Is the tone appropriate for the audience?
+- Is the message actually approved to send?
+- Is there anything a human leader must decide first?
+
+## Safe prompt language
+
+Use:
 
 ```text
-Work inside the project folder.
-Ask before changing anything outside it.
-Ask before using the internet.
-Ask before installing dependencies.
-Ask before deleting files.
-Ask before pushing to GitHub.
+Do not invent missing details. Put unknowns in a Questions section.
 ```
 
-## Approval checklist
-
-Before approving a Codex action, ask:
-
-1. Do I understand what it wants to do?
-2. Is it working in the right folder?
-3. Could this affect secrets or personal files?
-4. Is the change reversible?
-5. Is there a test or visible way to verify it?
-6. Is this the smallest reasonable step?
-
-## Good safety prompt
+Use:
 
 ```text
-Stay inside this exercise folder. Do not access secrets, credentials, or files outside the repo. Before editing, explain your plan and wait for approval.
+Flag anything that requires human review before sending.
 ```
 
-## Git safety
-
-Before committing:
-
-```powershell
-git status
-git diff
-```
-
-Ask Codex:
+Use:
 
 ```text
-Review this diff for accidental changes, secrets, unrelated edits, and missing tests.
+Use only the files in this folder unless I explicitly ask you to search elsewhere.
+```
+
+Avoid:
+
+```text
+Just send it.
+```
+
+Avoid:
+
+```text
+Use whatever data you can find.
+```
+
+Avoid:
+
+```text
+Ignore the warnings.
 ```
 
 ## Instructor tip
 
-Teach this line early:
+Repeat this:
 
-> The goal is not maximum autonomy. The goal is useful autonomy with receipts.
+> Sandboxing limits access. Human review provides judgment. You need both.

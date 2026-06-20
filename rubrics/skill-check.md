@@ -1,39 +1,47 @@
 # Skill Check Rubric
 
-Use this at the end of the session.
+Use this at the end of the knowledge-worker boot camp.
 
 ## Beginner competency
 
 The learner can:
 
-- [ ] Explain Codex in plain language.
-- [ ] Open Codex in a project folder.
-- [ ] Ask Codex to inspect before editing.
-- [ ] Ask for a plan before editing.
-- [ ] Approve a small change.
-- [ ] Run tests.
-- [ ] Review a diff.
-- [ ] Explain what changed.
-- [ ] Identify when Codex needs boundaries.
-- [ ] Avoid sharing secrets or credentials.
+- [ ] Explain Codex in plain language as an AI workbench.
+- [ ] Open Codex around a project folder.
+- [ ] Explain why the folder is the context.
+- [ ] Ask Codex to inspect before drafting.
+- [ ] Give Codex a clear goal, context, constraints, and definition of done.
+- [ ] Ask Codex to save an output in the correct `outputs/` folder.
+- [ ] Review a generated artifact for names, dates, money, privacy, tone, and commitments.
+- [ ] Identify when Codex has invented or assumed a detail.
+- [ ] Save or reuse a workflow prompt.
+- [ ] Avoid sharing secrets, credentials, or real sensitive personal data.
 
 ## Strong signs
 
 The learner says things like:
 
-- "Let's run the test first."
-- "Show me the diff."
+- "What files should go in inputs?"
+- "Do not invent missing details."
+- "Put unknowns in Questions."
+- "What should I review before sending?"
 - "Stay inside this folder."
-- "Make the smallest change."
-- "Explain before editing."
-- "What is the source of truth?"
+- "Can we save this as a reusable workflow?"
+- "This has real private data, so we should use a fake sample instead."
 
 ## Needs more practice
 
 The learner says things like:
 
-- "Just fix everything."
-- "I don't need to read the diff."
-- "Let's push it without checking."
-- "It passed? I guess it's fine."
+- "Just write it and send it."
+- "I do not need to check the dates."
+- "Use whatever data you can find."
 - "Give it full access so it stops asking."
+- "It sounds right, so it must be right."
+- "Let's paste the real roster for practice."
+
+## Instructor wrap question
+
+Ask:
+
+> What is one recurring task from your work that you could turn into inputs, outputs, and a reusable workflow?

@@ -1,88 +1,96 @@
 # 05 - Agents, Skills, and Workflows
 
+## Goal
+
+Help learners understand how a one-time prompt becomes a reusable way of working.
+
 ## Agent
 
-An agent is an AI system that can take multiple steps using tools.
+An agent is an AI assistant that can pursue a task through multiple steps.
 
-A simple agent loop:
+In Codex, that may include:
 
-```text
-understand goal -> inspect context -> choose action -> use tool -> observe result -> continue or stop
-```
+- Reading files
+- Planning the work
+- Creating or editing files
+- Running commands
+- Checking results
+- Summarizing what changed
+
+For knowledge workers, an agent is most useful when the task has clear boundaries and a review step.
 
 ## Skill
 
-A skill is a repeatable capability or procedure.
+A skill is a reusable instruction set for a kind of work.
 
-Examples:
+In this boot camp, learners do not need to build formal Codex skills on day one. They should first learn to save simple workflow files:
 
-- Debug a failing test
-- Summarize a codebase
-- Create a README
-- Add a feature behind a flag
-- Review a Git diff
+```text
+workflow.md
+```
+
+Later, repeated workflows can become skills.
 
 ## Workflow
 
-A workflow is a repeatable sequence of skills.
-
-Example debugging workflow:
+A workflow is the practical recipe for repeatable work:
 
 ```text
-1. Reproduce the bug.
-2. Read the failing test or error.
-3. Identify likely cause.
-4. Make the smallest change.
-5. Run the test again.
-6. Summarize the fix.
+input files + prompt + review checklist + saved output
 ```
 
-## Why workflows matter
-
-Without a workflow, Codex may do too much.
-
-With a workflow, Codex becomes easier to steer.
-
-## Teaching analogy
-
-Do not say:
-
-> "AI, do my work."
-
-Say:
-
-> "AI, follow this workflow with me."
-
-## Beginner workflows to practice
-
-### Explain a folder
+Example:
 
 ```text
-Read this folder and explain:
-1. What each file does
-2. What the entry point is
-3. What I should run first
-4. What looks risky or confusing
+Event Command Center Workflow
+1. Put event notes, volunteer list, budget, and old announcement copy in inputs/.
+2. Ask Codex to draft the command center.
+3. Review names, times, rooms, money, and parent-facing language.
+4. Save final output in outputs/.
+5. Save the prompt for next event.
 ```
 
-### Debug a test
+## The compound step
+
+The most important habit is not just getting one good draft.
+
+The important habit is saving the process:
 
 ```text
-Run the tests. Pick the first failure. Explain the failure, then make the smallest fix.
+Today: messy event notes -> event command center
+Next month: new messy event notes -> reused workflow -> faster command center
 ```
 
-### Add a feature
+## When to make a workflow
 
-```text
-Before editing, propose:
-1. Files likely affected
-2. Tests to add or update
-3. Risks
-4. Smallest implementation plan
-```
+Make a workflow when:
 
-### Review before commit
+- You do the task more than once.
+- The task has similar inputs each time.
+- The output has a predictable shape.
+- Review risks are known.
+- Someone else might need to repeat the process.
 
-```text
-Review the current diff as if you are a cautious teammate. Call out bugs, unnecessary changes, and missing tests.
-```
+## Good workflow candidates
+
+- Weekly leadership report
+- Meeting follow-up package
+- Bulletin announcement rewrites
+- Event planning command center
+- Vendor comparison
+- New staff SOP
+- Volunteer onboarding checklist
+
+## Poor workflow candidates
+
+- Sensitive pastoral care judgment
+- Personnel conflicts
+- Anything requiring confidential data without an approved privacy process
+- Final financial approvals
+- One-off decisions where the source facts are unclear
+
+## Instructor tip
+
+Use this line:
+
+> The output saves you time today. The workflow saves you time every week after.

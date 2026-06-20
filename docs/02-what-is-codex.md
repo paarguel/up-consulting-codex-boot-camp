@@ -1,46 +1,78 @@
 # 02 - What Is Codex?
 
-## Simple explanation
+## Goal
 
-Codex is an AI coding agent. It can work with a project folder, read files, suggest changes, edit files, run commands, and help you understand code.
+Explain Codex in plain language for someone who does not think of themselves as a coder.
 
-A good way to describe it to a beginner:
+## Plain-language definition
 
-> Codex is like a very fast junior developer sitting next to you. It can help, but you still need to give context, check the work, and decide what gets committed.
+Codex is an AI workbench that can operate on a project folder.
 
-## What Codex is good for
+In a normal chat, you mostly pass words back and forth. In Codex, you can give the assistant a folder full of work materials and ask it to inspect the files, organize them, draft outputs, and explain what it did.
 
-- Explaining unfamiliar code
-- Finding where a bug might live
-- Writing small functions
-- Adding tests
-- Refactoring messy code
-- Generating documentation
-- Reviewing a diff
-- Creating a plan before implementation
+For office and parish work, that means Codex can help with:
 
-## What Codex is not good for blindly
+- Event plans
+- Meeting minutes
+- Action trackers
+- Announcement rewrites
+- Weekly reports
+- Vendor comparisons
+- Roster cleanup
+- SOPs and checklists
+- Reusable prompt workflows
 
-- Handling secrets without care
-- Making large architecture changes without review
-- Touching production systems casually
-- Guessing business rules
-- Rewriting a whole codebase because the prompt was vague
-- Making irreversible changes without approval
+## The folder is the desk
 
-## Beginner workflow
+Teach this early:
 
 ```text
-1. Open the project folder.
-2. Ask Codex to inspect the README and files.
-3. Ask for a plan before editing.
-4. Approve a small change.
-5. Run tests.
-6. Review the diff.
-7. Ask Codex to explain the result.
-8. Commit only when you understand it.
+workbench/
+  inputs/
+  outputs/
+  workflows/
 ```
 
-## Useful instructor phrase
+- `inputs/` contains the messy notes, spreadsheets, drafts, and source material.
+- `outputs/` contains what Codex produces.
+- `workflows/` contains the saved prompt or checklist so the task can be repeated.
 
-> Codex is powerful when the project has rails: a clear folder, a clear task, a test, and a human reviewing the result.
+## What Codex is good at
+
+Codex is useful when the job has:
+
+- Messy source material
+- Repeated writing
+- Lists that need cleanup
+- Meetings that need decisions and follow-ups
+- Events that need checklists and assignments
+- Reports that need structure
+- Processes that need to become SOPs
+
+## What Codex is not
+
+Codex is not:
+
+- A truth machine
+- A privacy officer
+- A replacement for judgment
+- A safe place to paste secrets
+- A final approver for emails, budgets, personnel decisions, or sensitive information
+
+## Good first use case
+
+Start with fake but realistic material:
+
+```text
+sample-work-packs/parish-event-planning/
+```
+
+Ask Codex to create an event command center from the files in `inputs/`.
+
+The learner gets an immediate result without needing to code.
+
+## Instructor language
+
+Say:
+
+> Codex is not here to make decisions for you. It is here to make the reviewable first draft faster.

@@ -1,15 +1,15 @@
-# First Session Prompts
+# Coding Addendum Prompts
 
 ## First safe prompt
 
 ```text
-Read README.md and AGENTS.md. Explain this repo to me like I am new to AI coding agents. Do not edit files yet.
+Read extra-lessons/coding-agent-basics/README.md and extra-lessons/coding-agent-basics/exercises/README.md. Explain the coding addendum to me like I am new to AI coding agents. Do not edit files yet.
 ```
 
 ## Exercise intro prompt
 
 ```text
-Open exercises/01-hello-codex. Read the README and tests. Explain the task and what files matter. Do not edit yet.
+Open extra-lessons/coding-agent-basics/exercises/01-hello-codex. Read the README and tests. Explain the task and what files matter. Do not edit yet.
 ```
 
 ## Plan prompt
